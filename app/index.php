@@ -1,6 +1,7 @@
 <?php
 
 use core\Router;
+use core\Request;
 
 spl_autoload_register(function ($class) {
     $path = str_replace('\\', '/', $class.'.php');
@@ -9,5 +10,5 @@ spl_autoload_register(function ($class) {
     }
 });
 
-$router = new Router();
-$router->run();
+Router::load('routes.php')
+    ->direct(Request::uri(), Request::method());
