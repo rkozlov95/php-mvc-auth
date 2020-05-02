@@ -10,5 +10,5 @@ spl_autoload_register(function ($class) {
     }
 });
 
-Router::load('routes.php')
+Router::load('config/routes.php')
     ->direct(Request::uri(), Request::method());
