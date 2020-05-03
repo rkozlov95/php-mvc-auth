@@ -2,10 +2,12 @@
 
 namespace controllers;
 
-class HomeController
+use controllers\Controller;
+
+class HomeController extends Controller
 {
     public function home()
     {
-        require "views/home.view.php";
+        return $this->view('home');
     }
 }
