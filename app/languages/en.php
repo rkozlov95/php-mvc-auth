@@ -2,6 +2,7 @@
     $lang = [
         "Login" => "Login",
         "Register" => "Register",
+        "Username" => "Username",
         "Email" => "Email",
         "Password" => "Password",
         "Repeat_password" => "Repeat password",

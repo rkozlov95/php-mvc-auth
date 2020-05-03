@@ -7,6 +7,12 @@
     <div class="card-body">
         <div class="form-group">
             <label>
+                <?php echo $lang['Username'] ?>
+            </label>
+            <input class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>
                 <?php echo $lang['Email'] ?>
             </label>
             <input class="form-control" required>
