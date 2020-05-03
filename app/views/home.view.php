@@ -2,19 +2,23 @@
 
 <div class="card">
     <div class="card-header">
-        Login
+        <?php echo $lang['Login'] ?>
     </div>
     <div class="card-body">
         <div class="form-group">
-            <label>Email</label>
+            <label>
+                <?php echo $lang['Email'] ?>
+            </label>
             <input class="form-control" required>
         </div>
         <div class="form-group">
-            <label>Password</label>
+            <label>
+                 <?php echo $lang['Password'] ?>
+            </label>
             <input class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">
-            Sign in
+            <?php echo $lang['Sign_in'] ?>
         </button>
     </div>
 </div>

@@ -10,5 +10,7 @@ spl_autoload_register(function ($class) {
     }
 });
 
+session_start();
+
 Router::load('config/routes.php')
     ->direct(Request::uri(), Request::method());
