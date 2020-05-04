@@ -17,9 +17,17 @@
             </label>
             <input class="form-control" required>
         </div>
-        <button type="submit" class="btn btn-primary">
-            <?php echo $lang['Sign_in'] ?>
-        </button>
+        <div class="form-group d-flex align-items-center">
+            <button type="submit" class="btn btn-primary mr-auto">
+                <?php echo $lang['Sign_in'] ?>
+            </button>
+            <a class="m-1">
+                <?php echo $lang['Dont_have_account'] ?>
+            </a>
+            <a href="/register">
+                <?php echo $lang['Sign_up'] ?>
+            </a>
+        </div>
     </div>
 </div>
 

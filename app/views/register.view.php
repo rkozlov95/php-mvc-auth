@@ -2,7 +2,7 @@
 
 <div class="card">
     <div class="card-header">
-        <?php echo $lang['Register'] ?>
+        <?php echo $lang['Registration'] ?>
     </div>
     <div class="card-body">
         <div class="form-group">
@@ -41,9 +41,14 @@
             </label>
             <input type="file" class="form-control-file">
         </div>
-        <button type="submit" class="btn btn-primary">
-            <?php echo $lang['Submit'] ?>
-        </button>
+        <div class="form-group d-flex align-items-center">
+            <button type="submit" class="btn btn-primary mr-auto">
+                <?php echo $lang['Submit'] ?>
+            </button>
+            <a href="/">
+                <?php echo $lang['Already_have_account'] ?>
+            </a>
+        </div>
     </div>
 </div>
 
