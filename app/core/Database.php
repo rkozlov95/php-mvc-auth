@@ -15,6 +15,8 @@ class Database
     private $pdo;
     private $error;
 
+    private $statement;
+
     public function __construct()
     {
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->name;
@@ -30,12 +32,26 @@ class Database
         }
     }
 
+    public function prepareQuery($query)
+    {
+        $this->statement = $this->pdo->prepare($query);
+    }
+
+    public function executeStatement()
+    {
+        try {
+            return $this->statement->execute();
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+        }
+    }
+
     public function selectAll($table)
     {
-        $statement = $this->pdo->prepare("select * from {$table}");
+        $this->prepareQuery("select * from {$table}");
 
-        $statement->execute();
+        $this->executeStatement();
 
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $this->statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }
