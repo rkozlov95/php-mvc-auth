@@ -35,4 +35,24 @@ class Controller
     {
         return Request::uri();
     }
+
+    public function filterPost()
+    {
+        $post = filter_input_array(INPUT_POST);
+        return array_map(function ($value) {
+            $trimmedValue = trim($value);
+            $convertedValue = htmlspecialchars($trimmedValue);
+            return $convertedValue;
+        }, $post);
+    }
+
+    public function filterGet()
+    {
+        $get = filter_input_array(INPUT_GET);
+        return array_map(function ($value) {
+            $trimmedValue = trim($value);
+            $convertedValue = htmlspecialchars($trimmedValue);
+            return $convertedValue;
+        }, $get);
+    }
 }
