@@ -9,6 +9,8 @@ services:
         volumes:
             - ./app:/srv/www/app
             - ./docker/php/www.conf:/usr/local/etc/php-fpm.d/www.conf
+            - ./bin:/srv/www/app/bin
+            - ./data:/srv/www/app/data
         environment:
             MYSQL_USER: roman
             MYSQL_PASSWORD: test
