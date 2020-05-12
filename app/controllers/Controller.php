@@ -11,9 +11,8 @@ class Controller
         $lang = $this->checkLanguage();
         $uri = $this->getUri();
 
-        extract($lang);
         extract($data);
-        extract(['uri' => $uri]);
+        extract(compact('lang', 'uri'));
 
         return require "views/{$name}.view.php";
     }
@@ -54,5 +53,19 @@ class Controller
             $convertedValue = htmlspecialchars($trimmedValue);
             return $convertedValue;
         }, $get);
+    }
+
+    public function encryptPassword($password)
+    {
+        $passwordHash = password_hash($password, PASSWORD_BCRYPT);
+
+        return $passwordHash;
+    }
+
+    public function verifyPassword($submittedPassword, $password)
+    {
+        $validPassword = password_verify($submittedPassword, $password);
+
+        return $validPassword;
     }
 }
