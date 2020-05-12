@@ -15,6 +15,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `about`, `image_path`) VALUES
-(1, 'Jack', 'jack@example.com', '12345678', 'Web Designer UI/UX Engineer', '/../public/images/jack.png'),
-(2, 'Loren', 'loren@example.com', '12345678', 'Social Activist', '/../public/images/loren.png'),
-(3, 'Michael', 'michael@example.com', '12345678', 'Software Engineer', '/../public/images/michael.png');
+(1, 'Jack', 'jack@example.com', '$2y$10$fGfTJGIzmVRjDH6Sm4ZWwe6KZGWiQx8yM8S18iVeEbfnb9icxJuGi', 'Web Designer UI/UX Engineer', '/../public/images/jack.png'),
+(2, 'Loren', 'loren@example.com', '$2y$10$fGfTJGIzmVRjDH6Sm4ZWwe6KZGWiQx8yM8S18iVeEbfnb9icxJuGi', 'Social Activist', '/../public/images/loren.png'),
+(3, 'Michael', 'michael@example.com', '$2y$10$fGfTJGIzmVRjDH6Sm4ZWwe6KZGWiQx8yM8S18iVeEbfnb9icxJuGi', 'Software Engineer', '/../public/images/michael.png');
