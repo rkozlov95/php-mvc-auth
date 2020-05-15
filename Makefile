@@ -1,4 +1,4 @@
 start:
 	docker-compose up --build -d
-db_init:
+init_db:
 	docker-compose exec php php bin/install.php
