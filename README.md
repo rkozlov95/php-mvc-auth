@@ -1,5 +1,7 @@
 # php-mvc-auth
 
+[![github action status](https://github.com/rkozlov95/php-mvc-auth/workflows/master/badge.svg)](https://github.com/rkozlov95/php-mvc-auth/actions)
+
 It is written without the use of composer, template engines or frameworks.
 
 ## Build and run
