@@ -1,53 +1,55 @@
 <?php include __DIR__ . '/partials/header.php'; ?>
 
+<?php include __DIR__ . '/partials/error.php'; ?>
+
 <div class="card shadow p-1">
     <div class="card-header">
-        <?php echo $lang['Registration'] ?>
+        <?=$lang['Registration']?>
     </div>
     <div class="card-body">
         <form action="/register" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label>
-                    <?php echo $lang['Username'] ?>
+                    <?=$lang['Username']?>
                 </label>
-                <input class="form-control" name="username" required>
+                <input class="form-control" name="username" value="<?=$data['username']?>" required>
             </div>
             <div class="form-group">
                 <label>
-                    <?php echo $lang['Email'] ?>
+                    <?=$lang['Email']?>
                 </label>
-                <input class="form-control" name="email" required>
+                <input class="form-control" name="email" value="<?=$data['email']?>" required>
             </div>
             <div class="form-group">
                 <label>
-                    <?php echo $lang['Password'] ?>
+                    <?=$lang['Password']?>
                 </label>
-                <input class="form-control" name="password" required>
+                <input class="form-control" name="password" value="<?=$data['password']?>" required>
             </div>
             <div class="form-group">
                 <label>
-                    <?php echo $lang['Repeat_password'] ?>
+                    <?=$lang['Confirm_password']?>
                 </label>
-                <input class="form-control" name="repeat_password" required>
+                <input class="form-control" name="confirm_password" value="<?=$data['confirmPassword']?>" required>
             </div>
             <div class="form-group">
                 <label>
-                    <?php echo $lang['About'] ?>
+                    <?=$lang['About']?>
                 </label>
-                <textarea class="form-control" rows="4" name="about"></textarea>
+                <textarea class="form-control" rows="4" name="about"><?=$data['about']?></textarea>
             </div>
             <div class="form-group">
                 <label>
-                    <?php echo $lang['Add_photo'] ?>
+                    <?=$lang['Add_photo']?>
                 </label>
-                <input type="file" class="form-control-file" name="image" required>
+                <input type="file" class="form-control-file" name="file" required multiple>
             </div>
             <div class="form-group d-flex align-items-center">
                 <button type="submit" class="btn btn-primary mr-auto">
-                    <?php echo $lang['Submit'] ?>
+                    <?=$lang['Submit']?>
                 </button>
                 <a href="/">
-                    <?php echo $lang['Already_have_account'] ?>
+                    <?=$lang['Already_have_account']?>
                 </a>
             </div>
         </form>
