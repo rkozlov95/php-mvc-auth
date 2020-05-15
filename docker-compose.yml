@@ -4,7 +4,6 @@ services:
 
     php:
         build: ./docker/php
-        user: www-data
         ports:
             - 9000:9000
         volumes:
