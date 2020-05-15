@@ -83,7 +83,7 @@ class RegisterController extends Controller
             return $this->view('register', compact('error', 'data'));
         }
 
-        if (!$this->isAllowedFileExtension($file['name'], ['jpeg','jpg','png'])) {
+        if (!$this->isAllowedFileExtension($file['name'], ['jpeg', 'jpg', 'png', 'gif'])) {
             $error = 'Not_allowed_file_extension';
             return $this->view('register', compact('error', 'data'));
         }
