@@ -68,4 +68,16 @@ class Controller
 
         return $validPassword;
     }
+
+    public function uploadFile($fileTmpName, $newFileName)
+    {
+        $path = 'public/images/';
+        return move_uploaded_file($fileTmpName, $path . $newFileName);
+    }
+
+    public function isAllowedFileExtension($fileName, $extensions)
+    {
+        $fileExtension = strtolower(end(explode('.', $fileName)));
+        return in_array($fileExtension, $extensions);
+    }
 }
